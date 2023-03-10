@@ -7,11 +7,9 @@ from sunse.tools import vals
 
 def test_body():
     # success
-    body = vals.body("\talpha   \n\tbravo   \n")
-    assert body == "\talpha\n\tbravo"
+    assert vals.body("\talpha   \n\tbravo   \n") == "\talpha\n\tbravo"
 
 
 def test_name():
     # success
-    name = vals.name("\tALPHA Bravo!\n")
-    assert name == "alpha_bravo"
+    assert vals.name("\tALPHA Bravo!\n") == "alpha_bravo"
