@@ -53,10 +53,11 @@ class Book:
 
     def __iter__(self) -> Iterator[Note]:
         """
-        Yield each Note in the Book's directory.
+        Yield each Note in the Book's directory in alphabetical order.
         """
 
-        yield from self.read().values()
+        notes = self.read().values()
+        yield from sorted(notes, key=lambda note: note.name)
 
     def __len__(self) -> int:
         """

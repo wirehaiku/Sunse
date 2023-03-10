@@ -7,14 +7,6 @@ from sunse.items.book import Book
 from sunse.items.note import Note
 
 
-@pytest.fixture(scope="function")
-def book(tmp_path):
-    for name in ["alpha", "bravo", "charlie"]:
-        tmp_path.joinpath(f"{name}.ext").write_text(name.upper())
-
-    return Book(str(tmp_path), ".ext")
-
-
 def test_init(book):
     # success
     assert book.dire
