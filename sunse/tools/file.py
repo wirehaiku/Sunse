@@ -5,8 +5,6 @@ File I/O functions.
 import glob as glob_
 import os
 
-from sunse import tools
-
 
 def create(path: str, body: str):
     """
@@ -14,7 +12,7 @@ def create(path: str, body: str):
     """
 
     with open(path, "x", encoding="utf-8") as fobj:
-        fobj.write(tools.vals.body(body))
+        fobj.write(body)
 
 
 def ensure(path: str):
@@ -42,7 +40,7 @@ def read(path: str) -> str:
     """
 
     with open(path, "r", encoding="utf-8") as fobj:
-        return tools.vals.body(fobj.read())
+        return fobj.read()
 
 
 def write(path: str, body: str):
@@ -51,4 +49,4 @@ def write(path: str, body: str):
     """
 
     with open(path, "w", encoding="utf-8") as fobj:
-        fobj.write(tools.vals.body(body))
+        fobj.write(body)
