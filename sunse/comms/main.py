@@ -2,8 +2,6 @@
 Click group function.
 """
 
-import code
-
 import click
 from sunse import tools
 from sunse.items.book import Book

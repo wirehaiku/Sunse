@@ -1,6 +1,7 @@
 """
 Tests for 'sunse.comms.main'.
 """
+
 import click
 from sunse.comms.main import group
 
