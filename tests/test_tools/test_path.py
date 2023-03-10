@@ -7,11 +7,6 @@ import os
 from sunse.tools import path
 
 
-def test_clean():
-    # success
-    assert path.clean("/dire/././file.ext") == "/dire/file.ext"
-
-
 def test_expand():
     # setup
     os.environ["HOME"] = "/home/test"

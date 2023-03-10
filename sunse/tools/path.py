@@ -4,13 +4,7 @@ File path manipulation functions.
 
 import os.path
 
-
-def clean(path: str) -> str:
-    """
-    Return a clean normalised file path.
-    """
-
-    return os.path.normpath(path)
+from sunse import tools
 
 
 def expand(path: str) -> str:
@@ -19,8 +13,7 @@ def expand(path: str) -> str:
     """
 
     path = os.path.expanduser(path)
-    path = os.path.expandvars(path)
-    return os.path.normpath(path)
+    return os.path.expandvars(path)
 
 
 def ext(path: str) -> str:
@@ -28,8 +21,7 @@ def ext(path: str) -> str:
     Return a file path's extension with a leading dot.
     """
 
-    ext = os.path.splitext(path)[-1]
-    return "." + ext.lstrip(".")
+    return os.path.splitext(path)[-1]
 
 
 def join(*elems: str) -> str:
@@ -37,8 +29,7 @@ def join(*elems: str) -> str:
     Return a clean joined file path.
     """
 
-    path = os.path.join(*elems)
-    return os.path.normpath(path)
+    return os.path.join(*elems)
 
 
 def name(path: str) -> str:

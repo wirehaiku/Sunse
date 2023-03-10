@@ -17,7 +17,7 @@ class Note:
         Initialise the Note.
         """
 
-        self.path = tools.path.clean(path)
+        self.path = tools.vals.path(path)
         self.name = tools.vals.name(tools.path.name(self.path))
 
     def __eq__(self, note: Any) -> bool:
@@ -35,7 +35,7 @@ class Note:
         Return the Note's unique hash code.
         """
 
-        return hash(repr(self.path))
+        return hash(self.__repr__())
 
     def __iter__(self) -> Iterator[str]:
         """
