@@ -37,7 +37,7 @@ You can install Sunse from PyPi...
 pip install sunse
 ```
 
-...or download a build from the [latest release][bugs].
+...or download a build from the [latest release][rels].
 
 ## Configuration
 
