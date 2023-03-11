@@ -30,7 +30,7 @@ def run():
     """
 
     def func(book: Book, args: str) -> tuple[int, str]:
-        os.environ.update({"SUNSE_DIR": book.dire, "SUNSE_EXT": book.ext})
+        os.environ.update({"SUNSE_DIR": book.dir, "SUNSE_EXT": book.ext})
         runner = click.testing.CliRunner()
         result = runner.invoke(group, args.split())
         if result.exception:

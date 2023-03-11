@@ -22,4 +22,4 @@ def test_name():
 
 def test_path():
     # success
-    assert vals.path("\t/dire/././file.ext\n") == "/dire/file.ext"
+    assert vals.path("\t/dir/././file.ext\n") == "/dir/file.ext"

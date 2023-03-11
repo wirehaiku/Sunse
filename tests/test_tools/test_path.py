@@ -18,14 +18,14 @@ def test_expand():
 
 def test_ext():
     # success
-    assert path.ext("/dire/file.ext") == ".ext"
+    assert path.ext("/dir/file.ext") == ".ext"
 
 
 def test_join():
     # success
-    assert path.join("/dire", "file.ext") == "/dire/file.ext"
+    assert path.join("/dir", "file.ext") == "/dir/file.ext"
 
 
 def test_name():
     # success
-    assert path.name("/dire/file.ext") == "file"
+    assert path.name("/dir/file.ext") == "file"

@@ -17,12 +17,12 @@ def test_create(tmp_path):
 
 def test_ensure(tmp_path):
     # setup
-    dire = tmp_path / "dire"
-    path = dire / "file.ext"
+    dir = tmp_path / "dir"
+    path = dir / "file.ext"
 
     # success
     file.ensure(path)
-    assert dire.exists()
+    assert dir.exists()
 
 
 def test_glob(tmp_path):

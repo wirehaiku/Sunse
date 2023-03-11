@@ -9,13 +9,13 @@ from sunse.items.note import Note
 
 def test_init(book):
     # success
-    assert book.dire
+    assert book.dir
     assert book.ext == ".ext"
 
 
 def test_eq(book):
     # success
-    assert book == Book(book.dire, ".ext")
+    assert book == Book(book.dir, ".ext")
     assert book != Book("/nope", ".nope")
     assert book != "not a Book"
 
@@ -37,23 +37,23 @@ def test_len(book):
 
 def test_repr(book):
     # setup
-    book.dire = "/dire"
+    book.dir = "/dir"
 
     # success
-    assert repr(book) == "Book('/dire', '.ext')"
+    assert repr(book) == "Book('/dir', '.ext')"
 
 
 def test_create(book):
     # success
     note = book.create("test", "Test.")
-    assert note.path == book.dire + "/test.ext"
+    assert note.path == book.dir + "/test.ext"
     assert note.read() == "Test."
 
 
 def test_read(book):
     # success
     assert book.read() == {
-        "alpha": Note(book.dire + "/alpha.ext"),
-        "bravo": Note(book.dire + "/bravo.ext"),
-        "charlie": Note(book.dire + "/charlie.ext"),
+        "alpha": Note(book.dir + "/alpha.ext"),
+        "bravo": Note(book.dir + "/bravo.ext"),
+        "charlie": Note(book.dir + "/charlie.ext"),
     }

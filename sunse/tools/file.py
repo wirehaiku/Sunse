@@ -20,17 +20,17 @@ def ensure(path: str):
     Create a file path's parent directory if it does not exist.
     """
 
-    dire = os.path.dirname(path)
-    if not os.path.isdir(dire):
-        os.makedirs(dire)
+    dir = os.path.dirname(path)
+    if not os.path.isdir(dir):
+        os.makedirs(dir)
 
 
-def glob(dire: str, ptrn: str) -> list[str]:
+def glob(dir: str, ptrn: str) -> list[str]:
     """
     Return a list of all file paths in a directory matching a glob pattern.
     """
 
-    path = os.path.join(dire, ptrn)
+    path = os.path.join(dir, ptrn)
     return sorted(glob_.glob(path))
 
 
