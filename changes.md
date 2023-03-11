@@ -1,6 +1,8 @@
 # Changes
 
 ## [Unreleased]
+
+## [v0.1.0] - 2023-03-11
 ### Added
 - Basic codebase, tests and packaging.
 - New commands: `list`.
