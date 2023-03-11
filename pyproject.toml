@@ -1,0 +1,30 @@
+[project]
+name        = "sunse"
+authors     = [{name="Stephen Malone", email = "none@example.com"}]
+description = "A plaintext note manager CLI in Python 3.10."
+keywords    = ["notes", "note-taking", "cli"]
+license     = {file="license.md"}
+readme      = "readme.md"
+version     = "0.0.0"
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Office/Business",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+]
+
+dependencies    = ["click>=8.1"]
+requires-python = ">=3.10"
+
+[project.optional-dependencies] # Optional
+test = ["mypy>=1.1", "pytest>=7.2", "pytest-mypy>=0.10"]
+
+[project.urls]
+"Homepage" = "https://github.com/wirehaiku/Sunse"
+"Tracker"  = "https://github.com/wirehaiku/Sunse/issues"
+
+[project.scripts]
+sunse = "sunse.__main__:main"
