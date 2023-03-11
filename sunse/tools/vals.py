@@ -29,7 +29,7 @@ def name(text: str) -> str:
     Return a clean note name string.
     """
 
-    text = text.lower().strip().replace(" ", "_")
+    text = text.lower().strip().replace(" ", "-")
     return "".join(char for char in text if char in NAME_CHARS).strip()
 
 

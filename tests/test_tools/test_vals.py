@@ -17,7 +17,7 @@ def test_ext():
 
 def test_name():
     # success
-    assert vals.name("\tALPHA Bravo!\n") == "alpha_bravo"
+    assert vals.name("\tALPHA Bravo!\n") == "alpha-bravo"
 
 
 def test_path():
